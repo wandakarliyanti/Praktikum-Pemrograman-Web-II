@@ -4,9 +4,9 @@
     </head>
     <body>
         <form method = "post" action = "">
-        <label for = "nilai">Nilai:</label>
-        <input type = "number" name = "nilai"><br>
-        <input type = "submit" name = "submit" value = "Konversi">
+            <label for = "nilai">Nilai:</label>
+            <input type = "number" name = "nilai"><br>
+            <input type = "submit" name = "submit" value = "Konversi">
         </form>
         
         <?php
