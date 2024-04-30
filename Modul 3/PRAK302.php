@@ -3,14 +3,14 @@
         <title>Menampilkan Gambar</title>
     </head>
     <body>
-        <form method="post" action="" autocomplete="off">
-            <label for="tinggi">Tinggi :</label>
-            <input type="number" name="tinggi" value="<?php echo isset($_POST['tinggi']) ? $_POST['tinggi'] : ''; ?>"><br>
+        <form method = "post" action = "" autocomplete = "off">
+            <label for = "tinggi">Tinggi :</label>
+            <input type = "number" name="tinggi" value = "<?php echo isset($_POST['tinggi']) ? $_POST['tinggi'] : ''; ?>"><br>
 
-            <label for="alamatGambar">Alamat Gambar :</label>
-            <input type="text" name="alamatGambar" value="<?php echo isset($_POST['alamatGambar']) ? $_POST['alamatGambar'] : ''; ?>"><br>
+            <label for = "alamatGambar">Alamat Gambar :</label>
+            <input type = "text" name = "alamatGambar" value = "<?php echo isset($_POST['alamatGambar']) ? $_POST['alamatGambar'] : ''; ?>"><br>
         
-            <input type="submit" name="submit" value="Cetak">
+            <input type = "submit" name = "submit" value = "Cetak">
         </form>
 
         <?php
@@ -20,7 +20,7 @@
 
         function cetakBentuk($tinggi, $gambar){
             $i = $tinggi;
-            while ($i >= 1) {
+            while($i >= 1){
                 $j = 1;
                 while($j <= $tinggi - $i){
                     echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
