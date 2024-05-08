@@ -35,19 +35,7 @@
                 <th width='90'>Keterangan</th>
             </tr>
         
-            <?php
-            function hitungTotalSKS($matkul){
-                $totalSks = 0;
-                foreach($matkul as $matakuliah){
-                    $totalSks += $matakuliah["sks"];
-                }
-            return $totalSks;
-            }
-        
-            function tentukanKeterangan($totalSks){
-                return $totalSks < 7 ? "Revisi KRS" : "Tidak Revisi";
-            }
-        
+            <?php    
             $data=array(
                 array(
                     "no" => "1",
@@ -112,6 +100,18 @@
                     ),
                 )
             );
+
+            function hitungTotalSKS($matkul){
+                $totalSks = 0;
+                foreach($matkul as $matakuliah){
+                    $totalSks += $matakuliah["sks"];
+                }
+            return $totalSks;
+            }
+        
+            function tentukanKeterangan($totalSks){
+                return $totalSks < 7 ? "Revisi KRS" : "Tidak Revisi";
+            }
 
             foreach($data as &$mahasiswa){
                 $mahasiswa["totalSks"] = hitungTotalSKS($mahasiswa["matkul"]);
