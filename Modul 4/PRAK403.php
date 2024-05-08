@@ -52,7 +52,7 @@
                 array(
                     "no" => "1",
                     "nama" => "Ridho",
-                    "matakuliah" => array(
+                    "matkul" => array(
                         array(
                             "pilihan" => "Pemrograman I", 
                             "sks" => 2
@@ -74,7 +74,7 @@
                 array(
                     "no" => "2",
                     "nama" => "Ratna",
-                    "matakuliah" => array(
+                    "matkul" => array(
                         array(
                             "pilihan" => "Basis Data I", 
                             "sks" => 2
@@ -92,7 +92,7 @@
                 array(
                     "no" => "3",
                     "nama" => "Tono",
-                    "matakuliah" => array(
+                    "matkul" => array(
                         array(
                             "pilihan" => "Rekaya Perangkat Lunak", 
                             "sks" => 3
@@ -114,13 +114,13 @@
             );
 
             foreach($data as &$mahasiswa){
-                $mahasiswa["totalSks"] = hitungTotalSKS($mahasiswa["matakuliah"]);
+                $mahasiswa["totalSks"] = hitungTotalSKS($mahasiswa["matkul"]);
                 $mahasiswa["keterangan"] = tentukanKeterangan($mahasiswa["totalSks"]);
             }
             unset($mahasiswa);
 
             foreach($data as $mahasiswa){
-                foreach($mahasiswa["matakuliah"] as $index => $matakuliah){
+                foreach($mahasiswa["matkul"] as $index => $matakuliah){
                     echo "<tr>";
                     if($index == 0){
                         echo "<td>".$mahasiswa["no"]."</td>";
