@@ -82,7 +82,7 @@
                     "nama" => "Tono",
                     "matkul" => array(
                         array(
-                            "pilihan" => "Rekaya Perangkat Lunak", 
+                            "pilihan" => "Rekayasa Perangkat Lunak", 
                             "sks" => 3
                         ),
                         array(
